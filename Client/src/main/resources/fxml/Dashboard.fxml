@@ -18,13 +18,9 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <Region fx:id="scoreBoardRegion" layoutX="669.0" layoutY="14.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" prefHeight="201.0" prefWidth="322.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
-      <Region fx:id="playersListRegion" layoutX="669.0" layoutY="227.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="439.0" prefWidth="322.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
-      <Region id="scoreBoardRegion" layoutX="684.0" layoutY="25.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" prefHeight="58.0" prefWidth="287.0" style="-fx-background-radius: 30; -fx-background-color: #11158F;" stylesheets="@../styles/Styles.css" />
-      <Region fx:id="dashboardRegion" layoutX="357.0" layoutY="62.0" onMouseEntered="#dashboardRegionMouseEntered" onMouseExited="#dashboardRegionMouseExited" prefHeight="498.0" prefWidth="287.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
-      <Region fx:id="profileRegion" layoutX="9.0" layoutY="205.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="234.0" prefWidth="322.0" style="-fx-background-radius: 15; -fx-background-color: #F3F5F9;" />
-      <Region id="playersList" layoutX="681.0" layoutY="258.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="58.0" prefWidth="298.0" style="-fx-background-radius: 30; -fx-background-color: #11158F;" stylesheets="@../styles/Styles.css" />
-      <JFXButton id="signInButton" alignment="CENTER" layoutX="388.0" layoutY="310.0" onAction="#vsPCbuttonClicked" onMouseEntered="#dashboardRegionMouseEntered" onMouseExited="#dashboardRegionMouseExited" prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="VS PC" textAlignment="CENTER" textFill="WHITE">
+      <Region fx:id="playersListRegion" layoutX="349.0" layoutY="62.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="439.0" prefWidth="322.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
+<!--      <Region id="playersList" layoutX="361.0" layoutY="62.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="58.0" prefWidth="298.0" style="-fx-background-radius: 30; -fx-background-color: #54BAB9;" stylesheets="@../styles/Styles.css" />-->
+      <JFXButton id="signInButton" alignment="CENTER" layoutX="388.0" layoutY="550.0" onAction="#vsPCbuttonClicked"  prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="VS Computer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -32,13 +28,8 @@
             <FontIcon iconColor="WHITE" iconLiteral="fa-desktop" iconSize="25" />
          </graphic>
       </JFXButton>
-      <Label layoutX="771.0" layoutY="28.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" text="Score Board" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <JFXListView id="scoreBoardLV" fx:id="scoreBoardLV" layoutX="684.0" layoutY="62.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" prefHeight="142.0" prefWidth="287.0" showTooltip="true" stylesheets="@../styles/Styles.css" />
-      <TableView fx:id="allUsersTable" layoutX="681.0" layoutY="295.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="298.0" stylesheets="@../styles/Styles.css">
+
+      <TableView fx:id="allUsersTable" layoutX="361.0" layoutY="138.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="298.0" stylesheets="@../styles/Styles.css">
          <columns>
             <TableColumn fx:id="username" prefWidth="75.0" text="username" />
             <TableColumn fx:id="score" prefWidth="53.0" text="score" />
@@ -46,53 +37,33 @@
             <TableColumn fx:id="level" prefWidth="83.0" text="Level" />
          </columns>
       </TableView>
-      <Label layoutX="446.0" layoutY="88.0" onMouseEntered="#dashboardRegionMouseEntered" onMouseExited="#dashboardRegionMouseExited" text="Dashboard" textFill="#4ba1ff">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Label>
-      <FontIcon iconColor="#54dfc4" iconLiteral="fa-table" iconSize="40" layoutX="397.0" layoutY="125.0" onMouseEntered="#dashboardRegionMouseEntered" onMouseExited="#dashboardRegionMouseExited" />
-      <FontIcon iconColor="#e77f9a" iconLiteral="fa-bar-chart-o" iconSize="25" layoutX="728.0" layoutY="51.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" />
-      <Label layoutX="777.0" layoutY="261.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" text="Players List" textFill="WHITE">
+
+      <Label layoutX="457.0" layoutY="78.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" text="Players List"  textFill="#54BAB9">
          <font>
             <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <FontIcon iconColor="#e77f9a" iconLiteral="fa-user-o" iconSize="25" layoutX="742.0" layoutY="284.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" />
-      <JFXButton id="signInButton" alignment="CENTER" defaultButton="true" layoutX="447.0" layoutY="579.0" onAction="#logoutButtonClicked" prefHeight="35.0" prefWidth="106.0" stylesheets="@../styles/Styles.css" text="Logout" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fa-chain-broken" iconSize="20" />
-         </graphic>
-      </JFXButton>
- 
-      <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="272.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="45.0" prefWidth="322.0" text="Username">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="339.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="30.0" prefWidth="77.0" text="Score">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="scoreValueLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="369.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="35.0" prefWidth="77.0" text="Value">
-         <font>
-            <Font size="18.0" />
          </font>
       </Label>
 
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="336.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="30.0" prefWidth="77.0" text="Level">
+       <Label  layoutX="100.0" layoutY="20.0"  prefHeight="30.0" prefWidth="150.0"  textFill="#54BAB9" text="Player :">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="levelLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="369.0" onMouseEntered="#profileRegionMouseEntered" onMouseExited="#profileRegionMouseExited" prefHeight="35.0" prefWidth="106.0" text="Value">
+      <Label fx:id="usernameLabel" layoutX="210.0" layoutY="14.0"  prefHeight="45.0" prefWidth="322.0" textFill="#54BAB9" text="Username">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
+      <Label  layoutX="760.0" layoutY="14.0"  prefHeight="30.0" prefWidth="150.0" textFill="#54BAB9" text="Score =">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreValueLabel" layoutX="865.0" layoutY="14.0" prefHeight="35.0" prefWidth="77.0" textFill="#54BAB9" text="Value">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+
    </children>
 </AnchorPane>

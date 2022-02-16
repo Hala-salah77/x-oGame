@@ -19,34 +19,50 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
 import playerModel.PlayerModel;
 
 
 public class FXMLController implements Initializable {
-    @FXML
-    private FontIcon xIcon;
-    @FXML
-    private FontIcon oIcon;
+   private Stage stage;
+   private Scene scene;
+//====================================
+
     @FXML
     private JFXButton mySignupButton;
     @FXML
     private JFXTextField usernameTF;
     @FXML
     Alert alert = new Alert(Alert.AlertType.ERROR);
+//==================================================================
+    @FXML
+    private JFXButton minimize;
 
+    @FXML
+    private JFXButton closebutton;
+
+    @FXML
+    private void closeAction(ActionEvent event) {
+            System.exit(0);
+    }
+
+    @FXML
+    private void minimizeAction(ActionEvent event) {
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+//==========================================================================
     @FXML
     private JFXPasswordField passwordTF;
     RequiredFieldValidator validator = new RequiredFieldValidator();
-
-
-    @FXML
-    private JFXButton googleButton, facebookButton;
-    boolean enteredGoogleBTN, enteredFacebookBTN; //Handle changing colors on hover (it detects if button was hovered over more than once)
 
 
 
@@ -75,19 +91,6 @@ public class FXMLController implements Initializable {
         //make sure that both fields aren't empty before attempting to switch the scene.
         validate();
     }
-
-    @FXML
-    private void googleButtonClicked(ActionEvent event) throws IOException {
-        System.out.println("Google button is clicked");
-        SwitchTo.GooglePopupScene();
-    }
-
-    @FXML
-    private void facebookButtonClicked(ActionEvent event) throws IOException {
-        System.out.println("Facebook button is clicked");
-    }
-
-
     private void validate() {
         Map<String, String> map = new HashMap<>();
         map.put("type", "login");
@@ -97,53 +100,9 @@ public class FXMLController implements Initializable {
         PlayRequest.sendJSON(map);
     }
 
-    /*
-    Styling functions section, leave and move on.
-    */
-    //Hovering over google button.
-    @FXML
-    private void googleButtonHovered(MouseEvent event) throws IOException {
-        if (enteredGoogleBTN)
-            googleButton.setStyle("-fx-background-color: #F8327E; ");
-        else
-            transition(event, googleButton, "0xDA7FBF", "0xF8327E");
-        enteredGoogleBTN = true;
-    }
-
-    //Leaving the google Button
-    @FXML
-    private void googleButtonExited(MouseEvent event) throws IOException {
-        googleButton.setStyle("-fx-background-color: #F8327E; ");
-    }
-
-    @FXML
-    private void facebookButtonHovered(MouseEvent event) throws IOException {
-        if (enteredFacebookBTN)
-            facebookButton.setStyle("-fx-background-color: #6493D0; ");
-        else
-            transition(event, facebookButton, "0x64D0F9", "0x6493D0");
-        enteredFacebookBTN = true;
-    }
-
-    @FXML
-    private void facebookButtonExited(MouseEvent event) throws IOException {
-        facebookButton.setStyle("-fx-background-color: #6493D0; ");
-    }
-
-    //Generic Transition function.
-    private void transition(MouseEvent event, JFXButton button, String colorFrom, String colorTo) {
-        JFXFillTransition transition = new JFXFillTransition();
-        transition.setDuration(Duration.millis(1500));
-        transition.setRegion(button);
-        transition.setFromValue(Color.web(colorFrom));
-        transition.setToValue(Color.web(colorTo));
-        transition.play();
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        new Flash(xIcon).setCycleCount(30).setSpeed(.3).setResetOnFinished(true).play();
-        new Flash(oIcon).setCycleCount(30).setSpeed(.3).setResetOnFinished(true).setDelay(Duration.millis(300)).play();
+ 
     }
 
 }

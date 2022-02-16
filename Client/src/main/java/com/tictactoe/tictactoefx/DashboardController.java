@@ -34,9 +34,7 @@ import playerModel.PlayerModel;
 import playerModel.updateView;
 
 public class DashboardController implements Initializable {
-    @FXML
-    private JFXListView<Label> scoreBoardLV = new JFXListView();
-    
+
     /*TableView Columns*/
     //Table 1 {User Specific}
     @FXML
@@ -61,10 +59,10 @@ public class DashboardController implements Initializable {
     private TableColumn<Player, String> level;
     @FXML
     private TableColumn<Player, JFXButton> status;
-    @FXML private Label usernameLabel , scoreValueLabel, levelLabel;
+    @FXML private Label usernameLabel , scoreValueLabel;
 
     //CSSing some components
-    @FXML private Region profileRegion, dashboardRegion, scoreBoardRegion, playersListRegion ;
+    @FXML private Region  playersListRegion ;
     DropShadow mouseEnteredShadow = new DropShadow(); // GRAY Color ( onMouseEntered)
     DropShadow mouseExitedShadow = new DropShadow(); //WHITE Color (Default On and onMouseExited)
     
@@ -76,34 +74,20 @@ public class DashboardController implements Initializable {
         GameConfig.setMode(1);  // pc mode
         SwitchTo.DifficultySelectionScene(event);
     }
-    
-    @FXML private void logoutButtonClicked(ActionEvent event) throws IOException {
-        App.getPlayerSoc().closeSocket();
-        SwitchTo.mainScene(event);
-    }
+
 
     @Override
 
     public void initialize(URL url, ResourceBundle rb) 
     {
         Player current = App.getPlayerSoc().getPlayer();
-//        changePictureButton.setVisible(false);
+
         mouseEnteredShadow.setColor(Color.GRAY); //set the shadow color of the  Region.
         mouseExitedShadow.setColor(Color.WHITE);
 
         
 
-        PlayerModel.players.entrySet().stream().limit(4).forEach((player) -> {
-            scoreBoardLV.getItems().add(new Label(player.getValue().getPlayerName() + ": " + player.getValue().getPlayerScore()));
-        });
 
-        scoreBoardLV.getStyleClass().add("mylistview");
-        if(current.getPlayerScore() < 500)
-            levelLabel.setText("Beginner");
-        else if(current.getPlayerScore() >= 500 && current.getPlayerScore() <= 1000)
-            levelLabel.setText("Intermediate");
-        else 
-            levelLabel.setText("Expert");
         
         usernameLabel.setText(current.getPlayerName());
         scoreValueLabel.setText( String.valueOf(current.getPlayerScore()));
@@ -121,47 +105,7 @@ public class DashboardController implements Initializable {
             region.setEffect(shadowType);
         }
     
-            /*
-            CSS Functions section
-            */
-        
-            //Floating effect for profilePic region.
-//            
-            @FXML private void profileRegionMouseEntered(MouseEvent event)
-            {
-                changeRegionColor(profileRegion, mouseEnteredShadow);
-            }
-
-            @FXML private void profileRegionMouseExited(MouseEvent event)
-            {
-                 changeRegionColor(profileRegion, mouseExitedShadow);
-            }
-            
-
-            
-            //Floating effect for dashboard Region
-            @FXML private void dashboardRegionMouseEntered(MouseEvent event)
-            {
-                 changeRegionColor(dashboardRegion, mouseEnteredShadow);
-            }
-            
-            @FXML private void dashboardRegionMouseExited(MouseEvent event)
-            {
-                changeRegionColor(dashboardRegion, mouseExitedShadow);
-            }
-            
-            //Floating effect for scoreBoard region
-            @FXML private void scoreBoardRegionMouseEntered(MouseEvent event)
-            {
-                changeRegionColor(scoreBoardRegion, mouseEnteredShadow);
-            }
-            
-            @FXML private void scoreBoardRegionMouseExited(MouseEvent event)
-            {
-                changeRegionColor(scoreBoardRegion, mouseExitedShadow);
-            }
-            
-            //Floating effect for PlayersList Region
+         //Floating effect for PlayersList Region
             @FXML private void playersListRegionMouseEntered(MouseEvent event)
             {
                 changeRegionColor(playersListRegion, mouseEnteredShadow);
