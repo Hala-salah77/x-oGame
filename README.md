@@ -19,31 +19,37 @@ A network XO game as the java project for Open Source Application Development Tr
 ## First Way
 
 
--You can run it on the same machine through the project itself in Netbeans application, Eclipse or IntelliJ by running the server then the client. 
-
-<br>
-To run on different machines you've to change the connection ip in the Client project in a class PlayerSoc.java from localhost to the ip of the machine which the server is runing on.
+You can run it on the same machine through the project itself in Netbeans application, Eclipse or IntelliJ by running the server then the client. 
 
 <br>
 
 
--Be carfeful old versions of Netbeans may not run the project. </br></br>
+-Be carfeful, You may face problems in old versions of Netbeans in running the project. </br></br>
 
 
 
 ## Secong Way by Terminal
 
-cd to the Server jar file directory and run:
+cd to Server\target... the Server jar file directory and run:
 ```
-java -jar ./Server.jar
+java -jar Server-1.0-SNAPSHOT.jar
 ```
 the server will listen to requests on the localhost port 5005
 
-cd to the Client jar file directory and run:
+cd to Client\target... Client jar file directory and run the client two time with two different cmd:
 ```
-java -jar ./Client.jar 
+
+java -jar TicTacToeFX-1.0-SNAPSHOT.jar
+
 ```
 </br>
+
+<br>
+To run on different machines you've to change the connection ip in the Client project in a class PlayerSoc.java from localhost to the ip of the machine which the server is runing on.
+
+</br>
+
+<br>
 
 # Prerequisites
 
