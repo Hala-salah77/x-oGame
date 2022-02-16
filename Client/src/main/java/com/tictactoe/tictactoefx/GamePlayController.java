@@ -57,7 +57,7 @@ public class GamePlayController implements Initializable {
     // int to choose which mode to play in (PCMode(1) / TwoPlayersMode(2))  
     private int mode = GameConfig.getMode();
 
-    // int to choose pc difficult level (Easy(1), Medium(2), Hard(3))
+//    // int to choose pc difficult level (Easy(1), Medium(2), Hard(3))
     private int level = GameConfig.getPcLevel();
     // ------------------------------------------------------------------ //
     public String currPlayerMark;

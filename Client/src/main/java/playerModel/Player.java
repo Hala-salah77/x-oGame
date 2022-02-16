@@ -27,25 +27,18 @@ public class Player {
     public JFXButton btn = new JFXButton();
     // constructor used for GUI only
 
-    public Player(String n, String p, String e){
-        name = new SimpleStringProperty(n);
-        uname = n;
-        password = p;
-        email = e;
+    public Player(String username, String userPassword, String userEmail){
+        name = new SimpleStringProperty(username);
+        uname = username;
+        password = userPassword;
+        email = userEmail;
         status = 0; // offline as initial
         score = 0; // as initial value
     }
     public String getName() {
         return name.get();
     }
-    public String getLevel() {
-        if(score < 500)
-            return "Beginner";
-        else if(score >= 500 && score <= 1000)
-            return "Intermediate";
-        else
-            return "Expert";
-    }
+
     public void setName(String n){
         name.set(n);
     }
@@ -79,14 +72,14 @@ public class Player {
 
 
     // constructors used for retrieve in databaseManager only
-    public Player(int i, String n, String p, String e, int s, String a, int sc){
-        id = i;
-        uname = n;
-        name = new SimpleStringProperty(n);
-        email = e;
-        password = p;
-        status = s;
-        score = sc;
+    public Player(int userId, String username, String userPassword, String userEmil, int userStatus, int userScore){
+        id = userId;
+        uname = username;
+        name = new SimpleStringProperty(username);
+        email = userEmil;
+        password = userPassword;
+        status = userStatus;
+        score = userScore;
 
     }
 
@@ -95,21 +88,21 @@ public class Player {
     }
 
     // setDATA for player
-    public void setPlayerName(String n){
-        name = new SimpleStringProperty(n);
-        uname = n;
+    public void setPlayerName(String username){
+        name = new SimpleStringProperty(username);
+        uname = username;
     }
-    public void setPlayerPassword(String p){
-        password = p;
+    public void setPlayerPassword(String userPassword){
+        password = userPassword;
     }
-    public void setPlayerEmail(String e){
-        email = e;
+    public void setPlayerEmail(String userEmail){
+        email = userEmail;
     }
-    public void setPlayerStatus(int s){
-        status = s;
+    public void setPlayerStatus(int userStatus){
+        status = userStatus;
     }
-    public void setPlayerScore(int s){
-        score = s;
+    public void setPlayerScore(int userScore){
+        score = userScore;
     }
  
 

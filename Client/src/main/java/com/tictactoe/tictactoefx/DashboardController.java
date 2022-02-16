@@ -55,8 +55,8 @@ public class DashboardController implements Initializable {
     private TableColumn<Player, String> username;
     @FXML
     private TableColumn<Player, String> score;
-    @FXML
-    private TableColumn<Player, String> level;
+//    @FXML
+//    private TableColumn<Player, String> level;
     @FXML
     private TableColumn<Player, JFXButton> status;
     @FXML private Label usernameLabel , scoreValueLabel;
@@ -95,7 +95,7 @@ public class DashboardController implements Initializable {
         username.setCellValueFactory(new PropertyValueFactory<>("name"));
         score.setCellValueFactory(new PropertyValueFactory<>("score"));
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
-        level.setCellValueFactory(new PropertyValueFactory<>("level"));
+//        level.setCellValueFactory(new PropertyValueFactory<>("level"));
         allUsersTable.setItems(updateView.GetObservable());
     }
     

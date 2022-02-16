@@ -131,10 +131,6 @@ public class SwitchTo {
         popupTransition(6, "Game Result");
     }
 
-    public static void GooglePopupScene() throws IOException
-    {
-        popupTransition(7, "Login with Google");
-    }
 
     public static void WrongCredentialsPopupScene() throws IOException
     {

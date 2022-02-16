@@ -13,28 +13,23 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.tictactoefx.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="1000.0" style="-fx-background-color : WHITE" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.tictactoefx.DashboardController">
     <stylesheets>
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
       <Region fx:id="playersListRegion" layoutX="349.0" layoutY="62.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="439.0" prefWidth="322.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
-<!--      <Region id="playersList" layoutX="361.0" layoutY="62.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="58.0" prefWidth="298.0" style="-fx-background-radius: 30; -fx-background-color: #54BAB9;" stylesheets="@../styles/Styles.css" />-->
       <JFXButton id="signInButton" alignment="CENTER" layoutX="388.0" layoutY="550.0" onAction="#vsPCbuttonClicked"  prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="VS Computer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
-         <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fa-desktop" iconSize="25" />
-         </graphic>
       </JFXButton>
 
-      <TableView fx:id="allUsersTable" layoutX="361.0" layoutY="138.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="298.0" stylesheets="@../styles/Styles.css">
+      <TableView fx:id="allUsersTable" layoutX="361.0" layoutY="138.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="280.0" stylesheets="@../styles/Styles.css">
          <columns>
-            <TableColumn fx:id="username" prefWidth="75.0" text="username" />
-            <TableColumn fx:id="score" prefWidth="53.0" text="score" />
-            <TableColumn fx:id="status" prefWidth="82.0" text="status" />
-            <TableColumn fx:id="level" prefWidth="83.0" text="Level" />
+            <TableColumn fx:id="username" prefWidth="90.0" text="username" />
+            <TableColumn fx:id="score" prefWidth="80.0" text="score" />
+            <TableColumn fx:id="status" prefWidth="125.0" text="status" />
          </columns>
       </TableView>
 

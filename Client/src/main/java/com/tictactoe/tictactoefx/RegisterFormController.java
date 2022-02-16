@@ -51,7 +51,6 @@ public class RegisterFormController implements Initializable {
 
     Alert alert = new Alert(AlertType.ERROR);
     public String ah="here";
-    @FXML private FontIcon xIcon, oIcon;
 
     RegexValidator regexValidator = new RegexValidator(); //Checks the email.
     RequiredFieldValidator validator = new RequiredFieldValidator();
@@ -112,27 +111,7 @@ public class RegisterFormController implements Initializable {
         }
 
 
-//        if (passwordPF.getText().equals(confirmPasswordPF.getText())) {
-//            if (validate()) {
-//                alert.setTitle("Information Dialog");
-//                alert.setHeaderText("success ");
-//                alert.setContentText("succsefully signed up!");
-//                alert.showAndWait();
-//                //Go back to the startup Scene.fxml
-//                SwitchTo.mainScene(event);
-//            } else {
-//                //put red component here and don't switch
-//                alert.setTitle("Information Dialog");
-//                alert.setHeaderText("WRONG email or username ");
-//                alert.setContentText("email or username might be wrong");
-//                alert.showAndWait();
-//            }
-//        } else {
-//            alert.setTitle("Information Dialog");
-//            alert.setHeaderText("WRONG PASSword");
-//            alert.setContentText("Passwords don't match");
-//            alert.showAndWait();
-//        }
+
     }
 
     @FXML private void backButtonClicked(ActionEvent event) throws IOException
@@ -142,8 +121,7 @@ public class RegisterFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        new Flash(xIcon).setCycleCount(60).setSpeed(.3).setResetOnFinished(true).play();
-        new Flash(oIcon).setCycleCount(60).setSpeed(.3).setResetOnFinished(true).setDelay(Duration.millis(300)).play();
+        
     }
 
 

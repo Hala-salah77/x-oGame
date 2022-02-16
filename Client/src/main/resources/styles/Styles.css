@@ -1,6 +1,10 @@
 #AnchorPane
 {
-    -fx-background-color: #54BAB9;
+    -fx-background-image: url('/fxml/x-o.jpeg');
+-fx-background-repeat: no-repeat; 
+-fx-background-size: 100% 100%; 
+-fx-background-position: center center;
+/*    -fx-background-color: #54BAB9;*/
 }
 
 /*Input TextField*/
@@ -139,7 +143,7 @@ GamePlay.FXML
  
  #playerRegion
  {
-     -fx-background-color:   #6f60fa;
+     -fx-background-color:  #22A7F0;
      -fx-background-radius: 20;
  }
  

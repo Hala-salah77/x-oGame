@@ -17,32 +17,24 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <FontIcon iconColor="#6f60fa" iconLiteral="fa-gamepad" iconSize="50" layoutX="474.0" layoutY="150.0" />
+      
       <JFXButton id="signInButton" alignment="CENTER" layoutX="388.0" layoutY="212.0" onAction="#easyButtonClicked" prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="Easy" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
-         <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fa-star-half" iconSize="25" />
-         </graphic>
+
       </JFXButton>
       <JFXButton id="signInButton" alignment="CENTER" defaultButton="true" layoutX="388.0" layoutY="347.0" onAction="#mediumButtonClicked" prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="Medium" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
-         <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fa-star" iconSize="25" />
-         </graphic>
+
       </JFXButton>
       <JFXButton id="signInButton" alignment="CENTER" defaultButton="true" layoutX="388.0" layoutY="493.0" onAction="#hardButtonClicked" prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="Hard" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
-         <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fa-star" iconSize="25" />
-         </graphic>
       </JFXButton>
-      <FontIcon iconColor="WHITE" iconLiteral="fa-star" iconSize="26" layoutX="439.0" layoutY="531.0" />
       <JFXButton id="backButtonGamePlay" onAction="#backButtonClicked" prefHeight="40.0" prefWidth="63.0" ripplerFill="#c7b1ff" stylesheets="@../styles/Styles.css" text=" ">
          <graphic>
             <FontIcon iconColor="WHITE" iconLiteral="fa-angle-left" iconSize="30" translateX="3.0" />
