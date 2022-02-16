@@ -37,6 +37,15 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
+      <JFXListView id="scoreBoardLV" fx:id="scoreBoardLV" layoutX="684.0" layoutY="62.0" onMouseEntered="#scoreBoardRegionMouseEntered" onMouseExited="#scoreBoardRegionMouseExited" prefHeight="142.0" prefWidth="287.0" showTooltip="true" stylesheets="@../styles/Styles.css" />
+      <TableView fx:id="allUsersTable" layoutX="681.0" layoutY="295.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="298.0" stylesheets="@../styles/Styles.css">
+         <columns>
+            <TableColumn fx:id="username" prefWidth="75.0" text="username" />
+            <TableColumn fx:id="score" prefWidth="53.0" text="score" />
+            <TableColumn fx:id="status" prefWidth="82.0" text="status" />
+            <TableColumn fx:id="level" prefWidth="83.0" text="Level" />
+         </columns>
+      </TableView>
       <Label layoutX="446.0" layoutY="88.0" onMouseEntered="#dashboardRegionMouseEntered" onMouseExited="#dashboardRegionMouseExited" text="Dashboard" textFill="#4ba1ff">
          <font>
             <Font name="System Bold" size="30.0" />
