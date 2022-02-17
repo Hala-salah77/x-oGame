@@ -87,10 +87,12 @@ public class PlayerModel {
             if (res.next()) {
                 return playerObiect(res);
             }
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return null;
+
+     return null;
     }
 
     public static Player getPlayer(int id) {
@@ -191,7 +193,8 @@ public class PlayerModel {
             e.printStackTrace();
         }
         return jsonObject;
-    }
 
  
+    }
+
 }

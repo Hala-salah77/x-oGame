@@ -1,13 +1,22 @@
+#AnchorPane
+{
+-fx-background-image: url('/fxml/green.jpg');
+-fx-background-repeat: no-repeat; 
+-fx-background-size: 100% 100%; 
+-fx-background-position: center center;
+/*    -fx-background-color: #54BAB9;*/
+}
+
 .button {
     -fx-font-weight: bold;
 }
 
 .table-view:focused{
-    -fx-background-color:  #F3F5F9;
+    -fx-background-color:  #E6E6FA;
 }
 
 .table-view .column-header {
-    -fx-background-color: #EEF3FD;
+    -fx-background-color: #E6E6FA;
 }
 
 .table-view .column-header-background .label{

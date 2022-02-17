@@ -48,8 +48,8 @@ public class GamePlayController implements Initializable {
     @FXML
     private JFXNodesList nodeList;
 
-    private final String colorX = "-fx-text-fill: #3989d4; ";
-    private final String colorO = "-fx-text-fill: #3abcd4; ";
+    private final String colorX = "-fx-text-fill: #ffffff; ";
+    private final String colorO = "-fx-text-fill: #DDA0DD; ";
 
     @FXML
     Circle playerXCircle, playerOCircle;

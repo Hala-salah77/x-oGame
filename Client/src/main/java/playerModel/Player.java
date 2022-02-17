@@ -93,10 +93,13 @@ public class Player {
         uname = username;
     }
     public void setPlayerPassword(String userPassword){
-        password = userPassword;
+            password = userPassword;
+
     }
     public void setPlayerEmail(String userEmail){
-        email = userEmail;
+
+            email = userEmail;
+
     }
     public void setPlayerStatus(int userStatus){
         status = userStatus;

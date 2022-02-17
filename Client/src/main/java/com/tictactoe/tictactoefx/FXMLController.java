@@ -42,24 +42,6 @@ public class FXMLController implements Initializable {
     private JFXTextField usernameTF;
     @FXML
     Alert alert = new Alert(Alert.AlertType.ERROR);
-//==================================================================
-    @FXML
-    private JFXButton minimize;
-
-    @FXML
-    private JFXButton closebutton;
-
-    @FXML
-    private void closeAction(ActionEvent event) {
-            System.exit(0);
-    }
-
-    @FXML
-    private void minimizeAction(ActionEvent event) {
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        stage.setIconified(true);
-    }
-//==========================================================================
     @FXML
     private JFXPasswordField passwordTF;
     RequiredFieldValidator validator = new RequiredFieldValidator();

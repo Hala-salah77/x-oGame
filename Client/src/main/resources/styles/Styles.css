@@ -1,6 +1,6 @@
 #AnchorPane
 {
-    -fx-background-image: url('/fxml/x-o.jpeg');
+    -fx-background-image: url('/fxml/white-img.jpg');
 -fx-background-repeat: no-repeat; 
 -fx-background-size: 100% 100%; 
 -fx-background-position: center center;
@@ -19,13 +19,13 @@
 /*Buttons*/
 #signInButton 
 {
-    -fx-background-color:  #22A7F0;
+    -fx-background-color:  #9400D3;
     -fx-background-radius:  5;
 }
 
 #signUpButton 
 {
-    -fx-background-color:  #22A7F0;
+    -fx-background-color:  #9400D3;
     -fx-background-radius: 5;
 }
 
@@ -74,7 +74,7 @@ GamePlay.FXML
 
 #xoBTN1 ,#xoBTN2, #xoBTN3, #xoBTN4 , #xoBTN5,  #xoBTN6,  #xoBTN7,  #xoBTN8,  #xoBTN9
 {
-    -fx-background-color: white;
+    -fx-background-color: #708090;
     -fx-border-color: #DADADA;
 }
 
@@ -143,7 +143,7 @@ GamePlay.FXML
  
  #playerRegion
  {
-     -fx-background-color:  #22A7F0;
+     -fx-background-color: #9400D3;
      -fx-background-radius: 20;
  }
  

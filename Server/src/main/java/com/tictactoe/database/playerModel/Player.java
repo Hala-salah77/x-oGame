@@ -78,11 +78,13 @@ public class Player {
     }
 
     public void setPlayerPassword(String userPassword) {
-        password = userPassword;
+            password = userPassword;
+
     }
 
     public void setPlayerEmail(String userEmail) {
-        email = userEmail;
+            email = userEmail;
+
     }
 
     public void setPlayerStatus(int userStatus) {
