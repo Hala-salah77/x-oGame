@@ -19,7 +19,7 @@ public class DatabaseManager {
     private void startConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/game","root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/game","root", "8101419");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DatabaseManager.class.getName()).log(Level.SEVERE, null, ex);
         }

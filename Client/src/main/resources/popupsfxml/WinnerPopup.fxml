@@ -12,7 +12,7 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
     <children>
-        <Label fx:id="result_txt" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="50.0" prefHeight="58.0" prefWidth="842.0" text="Congratulation" textAlignment="CENTER" textFill="#9400D3" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0">
+        <Label fx:id="result_txt" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="50.0" prefHeight="100.0" prefWidth="842.0" text="Congratulation" textAlignment="CENTER" textFill="#9400D3" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0">
             <font>
                 <Font name="System Bold Italic" size="24.0" />
             </font>
