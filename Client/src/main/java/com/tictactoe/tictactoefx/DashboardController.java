@@ -85,7 +85,6 @@ public class DashboardController implements Initializable {
         mouseEnteredShadow.setColor(Color.GRAY); //set the shadow color of the  Region.
         mouseExitedShadow.setColor(Color.WHITE);
 
-        
 
 
         

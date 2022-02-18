@@ -63,10 +63,12 @@
             <FontIcon iconColor="WHITE" iconLiteral="fa-angle-left" iconSize="30" translateX="3.0" />
          </graphic>
       </JFXButton>
-      
+      <Circle id="playerXCircle" fx:id="playerXCircle" fill="#6f60fa" layoutX="122.0" layoutY="265.0" radius="41.0" stroke="#54dfc4" strokeType="INSIDE" strokeWidth="5.0" />
+      <Circle fx:id="playerOCircle" fill="#6e61fa" layoutX="793.0" layoutY="265.0" radius="41.0" stroke="#54dfc4" strokeType="INSIDE" strokeWidth="5.0" />
       <Region id="playerRegion" layoutX="25.0" layoutY="200.0" prefHeight="150.0" prefWidth="232.0" stylesheets="@../styles/Styles.css" />
            <Label fx:id="playerXLabel" alignment="CENTER" layoutX="24.0" layoutY="200.0" prefHeight="40.0" prefWidth="232.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color:  #9400D3; -fx-border-radius: 20;" text="playerXLabel" />
 
+    
       <Label layoutX="122.0" layoutY="265.0" text="Score" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
