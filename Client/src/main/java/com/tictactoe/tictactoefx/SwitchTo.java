@@ -43,13 +43,12 @@ public class SwitchTo {
             add("SaveGameRequestPopup"); //4 ==> SaveGameRequest.fxml
             add("SaveGameSuccessPopup"); //5 ==> SaveGameSuccessPopup.fxml
             add("WinnerPopup"); //6 ==> Winner.fxml
-            add("GoogleLoginPopup"); // 7 ==> GoogleLoginPopup.fxml
-            add("WrongCredentialsPopup"); // 8 ==> WrongCredentialsPopup.fxml
-            add("RegisterationSuccessfulPopup"); // 9 ==> RegisterationSuccessfulPopup.fxml
-            add("SaveGameConfirmationPopup"); //10 ==> SaveGameConfirmationPopup.fxml
-            add("ServerErrorPopup"); // 11 ==> ServerErrorPopup.fxml
-            add("GameFailedPopup"); //12 ==> GameFailedPopup.fxml
-            add("ResetPopup"); // 13 ==> ResetPopup.fxml
+            add("WrongCredentialsPopup"); // 7 ==> WrongCredentialsPopup.fxml
+            add("RegisterationSuccessfulPopup"); // 8 ==> RegisterationSuccessfulPopup.fxml
+            add("SaveGameConfirmationPopup"); //9 ==> SaveGameConfirmationPopup.fxml
+            add("ServerErrorPopup"); // 10 ==> ServerErrorPopup.fxml
+            add("GameFailedPopup"); //11 ==> GameFailedPopup.fxml
+            add("ResetPopup"); // 12 ==> ResetPopup.fxml
         }
     };
 
@@ -134,32 +133,32 @@ public class SwitchTo {
 
     public static void WrongCredentialsPopupScene() throws IOException
     {
-        popupTransition(8, "Wrong Credentials were entered");
+        popupTransition(7, "Wrong Credentials were entered");
     }
 
     public static void RegisterationSuccessfullPopupScene() throws IOException
     {
-        popupTransition(9, "Successfully Registered");
+        popupTransition(8, "Successfully Registered");
     }
 
     public static void SaveGameConfirmationPopupScene() throws IOException
     {
-        popupTransition(10, "An already saved game was found");
+        popupTransition(9, "An already saved game was found");
     }
 
     public static void ServerErrorPopupScene() throws IOException
     {
-        popupTransition(11, "Server error!");
+        popupTransition(10, "Server error!");
     }
 
     public static void GameFailedPopupScene() throws  IOException
     {
-        popupTransition(12, "Game failed");
+        popupTransition(11, "Game failed");
     }
     
     public static void ResetPopupScene() throws IOException
     {
-        popupTransition(13, "Game reset request");
+        popupTransition(12, "Game reset request");
     }
 }
 

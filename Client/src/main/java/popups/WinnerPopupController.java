@@ -41,10 +41,6 @@ public class WinnerPopupController implements Initializable {
         App.getPopUpWindow().close();
     }
 
-    @FXML
-    private void shareButtonClicked(ActionEvent event) {
-        System.out.println("Share was pressed");
-    }
 
     @FXML
     private void exitButtonClicked(ActionEvent event) {

@@ -11,7 +11,6 @@ import org.kordamp.ikonli.javafx.FontIcon;
 
 public class WrongCredentialsPopupController implements Initializable {
 
-    @FXML private FontIcon lockIcon;
     @FXML private JFXButton okButton;
     @FXML private void okButtonClicked(ActionEvent event)
     {
@@ -21,7 +20,6 @@ public class WrongCredentialsPopupController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
-        new Shake(lockIcon).setCycleCount(30).setSpeed(.2).setResetOnFinished(true).play();
     }    
     
 }
