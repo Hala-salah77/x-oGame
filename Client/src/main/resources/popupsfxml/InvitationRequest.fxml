@@ -12,30 +12,29 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <JFXButton layoutX="329.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Yes" textFill="WHITE">
+      <JFXButton layoutX="329.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Yes" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <FontIcon iconColor="#6f60fa" iconLiteral="fa-handshake-o" iconSize="50" layoutX="268.0" layoutY="53.0" />
-      <Label fx:id="requestLabel" layoutX="239.0" layoutY="63.0" text="Username" textFill="#46bca4">
+      <Label fx:id="requestLabel" layoutX="239.0" layoutY="63.0" text="Username" textFill="#9400D3">
          <font>
-            <Font name="System Bold" size="26.0" />
+            <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
-      <JFXButton layoutX="146.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="No" textFill="WHITE">
+      <JFXButton layoutX="146.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="No" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <Label fx:id="contentLabel" layoutX="241.0" layoutY="149.0" text="Are you ready?">
+      <Label fx:id="contentLabel" layoutX="241.0" layoutY="149.0" textFill="#9400D3" text="Are you ready?">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="headerLabel" layoutX="209.0" layoutY="108.0" text="Wants to play with you">
+      <Label fx:id="headerLabel" layoutX="209.0" layoutY="108.0" textFill="#9400D3" text="Wants to play with you">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
    </children>

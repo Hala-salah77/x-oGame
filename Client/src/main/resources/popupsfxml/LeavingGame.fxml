@@ -12,20 +12,19 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <FontIcon fx:id="heartIcon" iconColor="#f86bc7" iconLiteral="fa-smile-o" iconSize="50" layoutX="285.0" layoutY="66.0" />
-      <Label layoutX="229.0" layoutY="103.0" text="Ooops, game failed">
+      <Label layoutX="229.0" layoutY="103.0"  textFill="#9400D3" text="Failed game">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="148.0" prefHeight="27.0" prefWidth="436.0" text="Seems like the opponent close his game">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="148.0" prefHeight="27.0" prefWidth="436.0"  textFill="#9400D3" text="Player 2 close the game">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="243.0" layoutY="193.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Ok" textFill="WHITE">
+      <JFXButton layoutX="243.0" layoutY="193.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Ok" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

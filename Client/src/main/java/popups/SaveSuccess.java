@@ -20,7 +20,7 @@ import player.PlayerHandler;
 public class SaveSuccess implements Initializable {
     private JSONObject jsonData;
 
-    @FXML private FontIcon heartIcon;
+//    @FXML private FontIcon heartIcon;
     @FXML private void okButtonClicked(ActionEvent event)
     {
         GameApplication.getPopUpWindow().close();

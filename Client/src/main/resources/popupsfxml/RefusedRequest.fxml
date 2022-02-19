@@ -12,15 +12,14 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <FontIcon iconColor="#6f60fa" iconLiteral="fa-user-times" iconSize="50" layoutX="278.0" layoutY="63.0" />
-      <Label id="informingLabel" fx:id="informingLabel" layoutX="68.0" layoutY="110.0" text="We're sorry to inform you this but your request was rejected">
+      <Label id="informingLabel" fx:id="informingLabel" layoutX="68.0" layoutY="110.0" textFill="#9400D3" text="your request is rejected">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="237.0" layoutY="186.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Ok" textFill="WHITE">
+      <JFXButton layoutX="237.0" layoutY="186.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Ok" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

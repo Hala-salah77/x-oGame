@@ -12,25 +12,24 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <FontIcon iconColor="#6f60fa" iconLiteral="fa-file-text-o" iconSize="50" layoutX="279.0" layoutY="64.0" />
-      <Label fx:id="playerNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="94.0" prefHeight="27.0" prefWidth="565.0" text="You have an already saved game with ">
+      <Label fx:id="playerNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="94.0" prefHeight="27.0" prefWidth="565.0"  textFill="#9400D3" text="You have an already saved game with ">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="137.0" prefHeight="27.0" prefWidth="391.0" text="Do you want to resume it?" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="137.0" prefHeight="27.0" prefWidth="391.0"  textFill="#9400D3" text="Do you want to resume it?" textAlignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="152.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Yes" textFill="WHITE">
+      <JFXButton layoutX="152.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Yes" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="340.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="No" textFill="WHITE">
+      <JFXButton layoutX="340.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="No" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

@@ -12,15 +12,14 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <FontIcon iconColor="#f86bc7" iconLiteral="fa-close" iconSize="50" layoutX="288.0" layoutY="73.0" />
-      <Label layoutX="144.0" layoutY="124.0" text="The opponent refused to save the game !">
+      <Label layoutX="144.0" layoutY="124.0" textFill="#9400D3" text="Player 2 refused to save the game !">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="245.0" layoutY="203.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Ok" textFill="WHITE">
+      <JFXButton layoutX="245.0" layoutY="203.0" onAction="#okButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Ok" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

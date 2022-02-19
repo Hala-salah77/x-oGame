@@ -12,25 +12,24 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <FontIcon iconColor="#6f60fa" iconLiteral="fa-save" iconSize="50" layoutX="278.0" layoutY="63.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="93.0" prefHeight="27.0" prefWidth="527.0" text="Player against you wants to save the game and resume later">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="93.0" prefHeight="27.0" prefWidth="527.0" textFill="#9400D3" text="Player 2 wants to save the game and resume later">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="137.0" prefHeight="27.0" prefWidth="404.0" text="Press Yes to confirm">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="137.0" prefHeight="27.0" prefWidth="404.0" textFill="#9400D3" text="Press Yes to confirm">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="146.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="Yes" textFill="WHITE">
+      <JFXButton layoutX="146.0" layoutY="203.0" onAction="#yesButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="Yes" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="329.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #6f60fa;" text="No" textFill="WHITE">
+      <JFXButton layoutX="329.0" layoutY="203.0" onAction="#noButtonClicked" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #9400D3;" text="No" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>
