@@ -2,7 +2,7 @@ package com.tictactoe.server;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXToggleButton;
-import com.tictactoe.actions.App;
+import com.tictactoe.actions.ServerApplication;
 import com.tictactoe.database.playerModel.Player;
 import com.tictactoe.database.playerModel.PlayerModel;
 import com.tictactoe.database.playerModel.updateView;
@@ -38,7 +38,7 @@ public class FXMLController implements Initializable {
         } else {
             serverToggleButton.setText("Start Server");
             try {
-                App.getServerSocket().close();
+                ServerApplication.getServerSocket().close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

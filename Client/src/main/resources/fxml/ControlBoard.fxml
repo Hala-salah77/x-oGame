@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="1000.0" style="-fx-background-color : WHITE" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.tictactoefx.ControlBoard">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Region fx:id="playersListRegion" layoutX="349.0" layoutY="62.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="439.0" prefWidth="322.0" style="-fx-background-color: #F3F5F9; -fx-background-radius: 20;" />
+      <JFXButton id="signInButton" alignment="CENTER" layoutX="388.0" layoutY="550.0" onAction="#vsPCbuttonClicked"  prefHeight="58.0" prefWidth="225.0" stylesheets="@../styles/Styles.css" text="VS Computer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </JFXButton>
+
+      <TableView fx:id="allUsersTable" layoutX="361.0" layoutY="138.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" prefHeight="353.0" prefWidth="280.0" stylesheets="@../styles/Styles.css">
+         <columns>
+            <TableColumn fx:id="username" prefWidth="90.0" text="username" />
+            <TableColumn fx:id="score" prefWidth="80.0" text="score" />
+            <TableColumn fx:id="status" prefWidth="125.0" text="status" />
+         </columns>
+      </TableView>
+
+      <Label layoutX="457.0" layoutY="78.0" onMouseEntered="#playersListRegionMouseEntered" onMouseExited="#playersListRegionMouseExited" text="Players List"  textFill="#9400D3">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+
+       <Label  layoutX="100.0" layoutY="20.0"  prefHeight="30.0" prefWidth="150.0"  textFill="#9400D3" text="Player :">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="210.0" layoutY="14.0"  prefHeight="45.0" prefWidth="322.0" textFill="#9400D3" text="Username">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label  layoutX="760.0" layoutY="14.0"  prefHeight="30.0" prefWidth="150.0" textFill="#9400D3" text="Score =">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreValueLabel" layoutX="865.0" layoutY="14.0" prefHeight="35.0" prefWidth="77.0" textFill="#9400D3" text="Value">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

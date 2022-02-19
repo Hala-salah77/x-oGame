@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="576.0" prefWidth="916.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.tictactoefx.SignUp">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+
+      <JFXTextField id="userNameTF" fx:id="usernameTF" labelFloat="true" layoutX="310.0" layoutY="190.0" prefHeight="25.0" prefWidth="298.0" promptText="Username" stylesheets="@../styles/Styles.css" />
+      <JFXTextField id="userNameTF" fx:id="emailTF" labelFloat="true" layoutX="310.0" layoutY="259.0" prefHeight="25.0" prefWidth="298.0" promptText="Email" stylesheets="@../styles/Styles.css" />
+      <JFXPasswordField id="passwordTF" fx:id="passwordPF" labelFloat="true" layoutX="310.0" layoutY="326.0" prefHeight="25.0" prefWidth="298.0" promptText="Password" stylesheets="@../styles/Styles.css" />
+      <JFXPasswordField id="passwordTF" fx:id="confirmPasswordPF" labelFloat="true" layoutX="310.0" layoutY="393.0" prefHeight="25.0" prefWidth="298.0" promptText="Confirm Password" stylesheets="@../styles/Styles.css" />
+      <JFXButton id="signUpButton" fx:id="registerButton" buttonType="RAISED" layoutX="309.0" layoutY="454.0" onAction="#registerButtonClicked" prefHeight="58.0" prefWidth="298.0" stylesheets="@../styles/Styles.css" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="385.0" layoutY="65.0" text="X-O Game" textFill="#9400D3">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Label>
+      <JFXButton id="backButtonRegister" layoutX="-2.0" layoutY="537.0" onAction="#backButtonClicked" prefHeight="40.0" prefWidth="65.0" ripplerFill="#c7b1ff" style="-fx-background-color: #480958;" stylesheets="@../styles/Styles.css" text=" ">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-angle-left" iconSize="30" translateX="2.0" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

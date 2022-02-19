@@ -5,8 +5,8 @@
  */
 package com.tictactoe.database.gameModel;
 
-import com.tictactoe.actions.App;
-import com.tictactoe.database.DatabaseManager;
+import com.tictactoe.actions.ServerApplication;
+import com.tictactoe.database.DatabaseConnection;
 import com.tictactoe.database.playerModel.PlayerModel;
 import org.json.simple.JSONObject;
 
@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 public class GameModel {
 
-    static DatabaseManager db = App.getDB();
+    static DatabaseConnection db = ServerApplication.getDB();
     private static Map<Integer, Game> games;
 
     public static void getGames() {

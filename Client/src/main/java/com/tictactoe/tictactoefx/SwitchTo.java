@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import actions.App;
-import actions.PlayRequest;
+import actions.GameApplication;
+import actions.GameRequest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,30 +25,30 @@ import player.PlayerHandler;
 public class SwitchTo {
 
     static ArrayList<String> ScenesList = new ArrayList<String>() {
-        {
-            add("Scene"); // 0 ==> Scene.fxml
-            add("RegisterForm"); // 1 ==> RegisterForm.fxml
-            add("Dashboard"); // 2 ==> Dashboard.fxml
-            add("GamePlay"); // 3 ==> GamePlay.fxml
-            add("DifficultySelection");//4 ==> DifficultySelection.fxml
-        }
+    {
+            add("Login"); 
+            add("SignUp"); 
+            add("ControlBoard"); 
+            add("GamePlay"); 
+            add("ComputerLevel");
+    }
     };
 
     static ArrayList<String> popUpList = new ArrayList<String>() {
         {
-            add("OnlineListPopup"); // 0 ==> OnlineListPopup.fxml
-            add("InvitationRequestPopup");// 1==> InvitationRequestPopup.fxml
-            add("RequestRejectedPopup"); //2 ==> RequestRejectedPopup.fxml
-            add("SaveGameRejectedPopup"); //3 ==> SaveGameRejectedPopup.fxml
-            add("SaveGameRequestPopup"); //4 ==> SaveGameRequest.fxml
-            add("SaveGameSuccessPopup"); //5 ==> SaveGameSuccessPopup.fxml
-            add("WinnerPopup"); //6 ==> Winner.fxml
-            add("WrongCredentialsPopup"); // 7 ==> WrongCredentialsPopup.fxml
-            add("RegisterationSuccessfulPopup"); // 8 ==> RegisterationSuccessfulPopup.fxml
-            add("SaveGameConfirmationPopup"); //9 ==> SaveGameConfirmationPopup.fxml
-            add("ServerErrorPopup"); // 10 ==> ServerErrorPopup.fxml
-            add("GameFailedPopup"); //11 ==> GameFailedPopup.fxml
-            add("ResetPopup"); // 12 ==> ResetPopup.fxml
+            add("OnlineList"); // 0 ==> OnlineListPopup.fxml
+            add("InvitationRequest");// 1==> InvitationRequestPopup.fxml
+            add("RefusedRequest"); //2 ==> RequestRejectedPopup.fxml
+            add("RefusedSave"); //3 ==> SaveGameRejectedPopup.fxml
+            add("SaveRequest"); //4 ==> SaveGameRequest.fxml
+            add("SaveSuccess"); //5 ==> SaveGameSuccessPopup.fxml
+            add("WinnerState"); //6 ==> Winner.fxml
+            add("LoginFailed"); // 7 ==> WrongCredentialsPopup.fxml
+            add("SuccessfulSignUp"); // 8 ==> RegisterationSuccessfulPopup.fxml
+            add("ConfirmSave"); //9 ==> SaveGameConfirmationPopup.fxml
+            add("ServerError"); // 10 ==> ServerErrorPopup.fxml
+            add("LeavingGame"); //11 ==> GameFailedPopup.fxml
+            add("PlayAgain"); // 12 ==> ResetPopup.fxml
         }
     };
 
@@ -75,7 +75,7 @@ public class SwitchTo {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle(title);
-        App.setPopUpWindow(stage);
+        GameApplication.setPopUpWindow(stage);
 //        stage.setAlwaysOnTop(true);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();

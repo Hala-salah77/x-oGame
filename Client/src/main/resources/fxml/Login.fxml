@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import java.net.URL?>
+
+    <AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="916.0" style="-fx-background-color : WHITE" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.tictactoefx.Login">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>   
+      <JFXButton id="signInButton" alignment="CENTER" buttonType="RAISED" defaultButton="true" layoutX="309.0" layoutY="247.0" onAction="#signInButtonClicked" prefHeight="58.0" prefWidth="298.0" stylesheets="@../styles/Styles.css" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+
+      </JFXButton>
+      <JFXTextField id="userNameTF" fx:id="usernameTF" labelFloat="true" layoutX="309.0" layoutY="125.0" prefHeight="25.0" prefWidth="298.0" promptText="Email" stylesheets="@../styles/Styles.css" />
+      <JFXPasswordField id="passwordTF" fx:id="passwordTF" labelFloat="true" layoutX="309.0" layoutY="188.0" prefHeight="25.0" prefWidth="298.0" promptText="Password" stylesheets="@../styles/Styles.css" />
+       <Label layoutX="385.0" layoutY="340.0" text="Don't have an account yet ?" textFill="#ffffff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="385.0" layoutY="65.0" text="X-O Game" textFill="#9400D3">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Label>
+
+      <JFXButton id="signUpButton" buttonType="RAISED" layoutX="309.0" layoutY="370.0" onAction="#signUpButtonClicked" prefHeight="58.0" prefWidth="298.0" stylesheets="@../styles/Styles.css" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+
+      </JFXButton>
+
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

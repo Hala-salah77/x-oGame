@@ -1,6 +1,6 @@
 package com.tictactoe.server;
 
-import com.tictactoe.actions.GameTypeScore;
+import com.tictactoe.actions.Score;
 import com.tictactoe.database.gameModel.Game;
 import com.tictactoe.database.gameModel.GameModel;
 import com.tictactoe.database.gameModel.GameStatus;
@@ -396,7 +396,7 @@ public class ServerHandler extends Thread {
         ChangePlayerStatus(game.getToPlayer().getID(),1);
         if (winner_id != 0) {
             GameModel.setWinner(game.getId(), winner_id);
-            int new_score = player.getPlayerScore() + GameTypeScore.WITH_FRIEND;
+            int new_score = player.getPlayerScore() + Score.WITH_FRIEND;
             player.setPlayerScore(new_score);
             jsonMsg.put("new_score", new_score);
             PlayerModel.updateScore(player.getID(), new_score);

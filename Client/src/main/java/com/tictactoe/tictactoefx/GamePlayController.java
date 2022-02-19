@@ -1,6 +1,6 @@
 package com.tictactoe.tictactoefx;
 
-import actions.App;
+import actions.GameApplication;
 import actions.GameConfig;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXNodesList;
@@ -149,7 +149,7 @@ public class GamePlayController implements Initializable {
                 xoTextOnButtonsList.add(" ");
             }
         }
-        current_player = App.getPlayerSoc().getPlayer();
+        current_player = GameApplication.getplayerSocket().getPlayer();
         if (mode == 1) // PCMode
         {
             // human starts game with label X
@@ -185,7 +185,7 @@ public class GamePlayController implements Initializable {
 
         printBoard();
         // save game controller to access it from anywhere
-        App.setGamePlayController(this);
+        GameApplication.setGamePlayController(this);
 
     }
 

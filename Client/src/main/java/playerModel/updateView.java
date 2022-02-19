@@ -1,6 +1,6 @@
 package playerModel;
 
-import actions.App;
+import actions.GameApplication;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,7 +20,7 @@ public class updateView {
             public void run() {
                 players.clear();
                 for (int i=0;i<map.size();++i) {
-                    if(map.get(i).getID()== App.getPlayerSoc().getPlayer().getID())
+                    if(map.get(i).getID()== GameApplication.getplayerSocket().getPlayer().getID())
                         continue;
                     players.add(map.get(i));
                 }

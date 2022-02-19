@@ -8,9 +8,7 @@ package com.tictactoe.database.playerModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.beans.property.SimpleStringProperty;
 
-/**
- * @author halim
- */
+
 public class Player {
     private int id; // autoGenerate in database
     private SimpleStringProperty name;

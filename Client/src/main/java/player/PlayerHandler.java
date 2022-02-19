@@ -1,8 +1,8 @@
 package player;
 
-import actions.App;
+import actions.GameApplication;
 import actions.GameConfig;
-import actions.PlayRequest;
+import actions.GameRequest;
 import com.tictactoe.tictactoefx.GamePlayController;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,13 +16,13 @@ import java.util.Map;
 public interface PlayerHandler {
 
     public static void sendPlayRequest(int player_id) throws IOException {
-        PlayerSoc playerSoc = App.getPlayerSoc();
+        SocketPlayer playerSocket = GameApplication.getplayerSocket();
         Map<String, String> map = new HashMap<>();
         map.put("type", "playRequest");
-        map.put("from_id", Integer.toString(playerSoc.getPlayer().getID()));
-        map.put("from_name", playerSoc.getPlayer().getPlayerName());
+        map.put("from_id", Integer.toString(playerSocket.getPlayer().getID()));
+        map.put("from_name", playerSocket.getPlayer().getPlayerName());
         map.put("to_id", Integer.toString(player_id));
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     // send updated board to the server
@@ -30,7 +30,7 @@ public interface PlayerHandler {
         Map<String, String> map = new HashMap<>();
         map.put("type", "updateBoard");
         map.putAll(getXOListASJSON(xoTextOnButtonsList));
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     // send to the other player a request for save the game
@@ -38,7 +38,7 @@ public interface PlayerHandler {
         Map<String, String> map = new HashMap<>();
         map.put("type", "saveGameRequest");
         map.putAll(getXOListASJSON(xoTextOnButtonsList));
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static Map<String, String> getXOListASJSON(ArrayList<String> xoTextOnButtonsList) {
@@ -53,48 +53,48 @@ public interface PlayerHandler {
         Map<String, String> map = new HashMap<>();
         map.put("type", "updateGameStatus");
         map.put("status", status);
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static void announceGameResult(int winner_id) {
         Map<String, String> map = new HashMap<>();
         map.put("type", "announceGameResult");
         map.put("winner_id", Integer.toString(winner_id));
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static void updateScore(int score) {
         Map<String, String> map = new HashMap<>();
         map.put("type", "updateScore");
         map.put("score", Integer.toString(score));
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static void resetGameRequest() {
         Map<String, String> map = new HashMap<>();
         map.put("type", "resetGameRequest");
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static void resetGame() {
-        GamePlayController game = App.getGamePlayController();
+        GamePlayController game = GameApplication.getGamePlayController();
         GameConfig.resetBoard(game.xoTextOnButtonsList);
         game.gameOverFlag = false;
         game.printBoard();
-        App.getPopUpWindow().close();
+        GameApplication.getPopUpWindow().close();
     }
 
     static void sendMessage(String message) {
         Map<String, String> map = new HashMap<>();
         map.put("type", "sendMessage");
         map.put("message", message);
-        PlayRequest.sendJSON(map);
+        GameRequest.sendJSON(map);
     }
 
     static void updatePlayers() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("type", "getall");
-        PlayRequest.sendJSONObject(jsonObject);
+        GameRequest.sendJSONObject(jsonObject);
     }
 
 

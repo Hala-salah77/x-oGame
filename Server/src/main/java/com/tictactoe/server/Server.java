@@ -1,6 +1,6 @@
 package com.tictactoe.server;
 
-import com.tictactoe.actions.App;
+import com.tictactoe.actions.ServerApplication;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -19,9 +19,9 @@ public class Server {
         try {
 //            InetAddress addr=InetAddress.getByName("192.168.1.12");
             myServerSocket = new ServerSocket(5005, 50);
-            App.setServerSocket(myServerSocket);
+            ServerApplication.setServerSocket(myServerSocket);
             System.out.println("server started: <http://127.0.0.1:5005>\n");
-            App.setDB();
+            ServerApplication.setDB();
 
 
             new Thread(() -> {

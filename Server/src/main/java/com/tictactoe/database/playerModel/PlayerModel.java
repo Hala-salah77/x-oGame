@@ -5,8 +5,8 @@
  */
 package com.tictactoe.database.playerModel;
 
-import com.tictactoe.actions.App;
-import com.tictactoe.database.DatabaseManager;
+import com.tictactoe.actions.ServerApplication;
+import com.tictactoe.database.DatabaseConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.json.simple.JSONArray;
@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 public class PlayerModel {
 
-    static DatabaseManager db = App.getDB();
+    static DatabaseConnection db = ServerApplication.getDB();
     private static Map<Integer, Player> players;
     public static ArrayList<Player> playerslist;
 
@@ -41,7 +41,7 @@ public class PlayerModel {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(DatabaseManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
         return playerslist;
     }
