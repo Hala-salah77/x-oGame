@@ -15,11 +15,17 @@ A network XO game as the java project for Open Source Application Development Tr
 
 # Running the project
 
+## Import Database
+- [Open your DBMS]()
+- [Create new database call it game]()
+- [Import the attached game.sql from x-oGame folder to your database ](#features) 
+
+</br>
 
 ## First Way
 
 
-You can run it on the same machine through the project itself in Netbeans application, Eclipse or IntelliJ by running the server then the client. 
+You can run it on the same machine through the project itself in Netbeans application, Eclipse, VScode (with Java extensions) or IntelliJ by running the server then the client. 
 
 <br>
 
@@ -45,7 +51,7 @@ java -jar TicTacToeFX-1.0-SNAPSHOT.jar
 </br>
 
 <br>
-To run on different machines you've to change the connection ip in the Client project in a class PlayerSoc.java from localhost to the ip of the machine which the server is runing on.
+To run on different machines you've to change the connection ip in the Client project in a class SocketPlayer.java from localhost to the ip of the machine which the server is runing on.
 
 </br>
 
@@ -60,8 +66,8 @@ JDK 8 or higher.
 ### Client Side Features:
 </br>
 
-- [sign up and Login Up]()
-- [see who is online offline orplaying with other players]()
+- [Sign up and Login Up]()
+- [See who is online offline orplaying with other players]()
 - [Play with PC with levels of difficulity]()
 - [Play with Online Players]()
 - [Chat]()

@@ -5,10 +5,7 @@
  */
 package com.tictactoe.database.gameModel;
 
-/**
- *
- * @author mahamoud nehro
- */
+
 public enum GameStatus {
     REQUEST, COMPLETE, INPROGRESS, PAUSE, FAIL
 }
